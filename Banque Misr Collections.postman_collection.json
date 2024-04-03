@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e061544b-00c2-44a1-9999-ab47564ecef0",
+		"_postman_id": "d496ea76-db51-4fb6-86b9-5a7c666c0655",
 		"name": "Banque Misr Collections",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28717856"
@@ -29,7 +29,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"username\": \"hesen\",\r\n  \"password\": \"testPassword\",\r\n  \"deposit\": 100,\r\n  \"role\": \"SELLER\"\r\n}\r\n",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -577,7 +577,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"username\": \"hesen\",\r\n  \"password\": \"testPassword\",\r\n  \"deposit\": 100,\r\n  \"role\": \"SELLER\"\r\n}\r\n",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "json"
