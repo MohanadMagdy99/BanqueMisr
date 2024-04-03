@@ -1,0 +1,25 @@
+version: '3.7'
+networks:
+  proxy:
+services:
+  postgres:
+    image: postgres
+    container_name: postgres_task_management
+    environment:
+      POSTGRES_DB: task_management
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+
+  maildev:
+    container_name: maildev
+    image: maildev/maildev
+    restart: unless-stopped
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+    environment:
+      MAILDEV_SMTP_PORT: 1025
+    networks:
+      - proxy

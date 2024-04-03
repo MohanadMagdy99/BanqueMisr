@@ -1,0 +1,776 @@
+{
+	"info": {
+		"_postman_id": "e061544b-00c2-44a1-9999-ab47564ecef0",
+		"name": "Banque Misr Collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28717856"
+	},
+	"item": [
+		{
+			"name": "Banque Misr",
+			"item": [
+				{
+					"name": "Task Folder",
+					"item": [
+						{
+							"name": "Delete Task",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0SmFuZURvZU1hbmFnZXIiLCJpYXQiOjE3MTIxMzc3OTEsImV4cCI6MTcxMjQzNzc5MX0.3LEIcAT1jzqhgQmBms1aHYhCJ_Sj9rR3S1sa79O2PsQZ7jvTgbKpPvq222JrYpyxH97oTNzP3JeON9bTvYANyA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"hesen\",\r\n  \"password\": \"testPassword\",\r\n  \"deposit\": 100,\r\n  \"role\": \"SELLER\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/tasks/:taskId",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"tasks",
+										":taskId"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": null,
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "taskId",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Task",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0SmFuZURvZU1hbmFnZXIiLCJpYXQiOjE3MTIxMzc3OTEsImV4cCI6MTcxMjQzNzc5MX0.3LEIcAT1jzqhgQmBms1aHYhCJ_Sj9rR3S1sa79O2PsQZ7jvTgbKpPvq222JrYpyxH97oTNzP3JeON9bTvYANyA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Test Task23\",\r\n    \"description\": \"This is a Test Task23\",\r\n    \"priority\": \"CRITICAL\",\r\n    \"status\":\"TODO\",\r\n    \"dueDate\":\"2024-04-20T15:00:00Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/tasks/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"tasks",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Task",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0SmFuZURvZU1hbmFnZXIiLCJpYXQiOjE3MTIxMzc3OTEsImV4cCI6MTcxMjQzNzc5MX0.3LEIcAT1jzqhgQmBms1aHYhCJ_Sj9rR3S1sa79O2PsQZ7jvTgbKpPvq222JrYpyxH97oTNzP3JeON9bTvYANyA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Test Task23\",\r\n    \"description\": \"This is a Test Task23\",\r\n    \"priority\": \"MEDIUM\",\r\n    \"status\":\"TODO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/tasks/:taskId",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"tasks",
+										":taskId"
+									],
+									"variable": [
+										{
+											"key": "taskId",
+											"value": "24"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Tasks",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huRG9lIiwiaWF0IjoxNzEyMTM3MTE3LCJleHAiOjE3MTI0MzcxMTd9.Yz9Xt5c8f96CJzIF5vaY_pBmmcJRr4fFUeO7-cXnumcvJ0XZx_W94cbWZcl5rAYcmWBqRNUnD6p9rZuPbet39Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/tasks/?page=1&size=10",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"tasks",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "priority",
+											"value": "HIGH",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Task By Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huRG9lIiwiaWF0IjoxNzEyMTM3MTE3LCJleHAiOjE3MTI0MzcxMTd9.Yz9Xt5c8f96CJzIF5vaY_pBmmcJRr4fFUeO7-cXnumcvJ0XZx_W94cbWZcl5rAYcmWBqRNUnD6p9rZuPbet39Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/tasks/:taskid",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"tasks",
+										":taskid"
+									],
+									"variable": [
+										{
+											"key": "taskid",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Assign Task To User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0SmFuZURvZU1hbmFnZXIiLCJpYXQiOjE3MTIxMzc3OTEsImV4cCI6MTcxMjQzNzc5MX0.3LEIcAT1jzqhgQmBms1aHYhCJ_Sj9rR3S1sa79O2PsQZ7jvTgbKpPvq222JrYpyxH97oTNzP3JeON9bTvYANyA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/tasks/:userId/:taskId",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"tasks",
+										":userId",
+										":taskId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "3"
+										},
+										{
+											"key": "taskId",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get My Tasks",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYW5lRG9lIiwiaWF0IjoxNzEyMTM3NzEzLCJleHAiOjE3MTI0Mzc3MTN9.wOM1V3Z5qf6m3Op8qOHLU-8aDRAdOdWZ7cIloOU1KzWpTyu0Y3n2gBGKk7ID9LRseWOT1_BHAnQFPEiHWwwfVA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/tasks/my-tasks?page=1&size=10",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"tasks",
+										"my-tasks"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "priority",
+											"value": "HIGH",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User Folder",
+					"item": [
+						{
+							"name": "Sign up",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMjEzODQ3OCwiZXhwIjoxNzEyNDM4NDc4fQ.WG3aHmS0TC9nxELfBdv678SCaS6WFnOGjVv7f2e4GTQKtFyTDKo5cd6AVYWjZ_TeSNs_q7qucCD_uqgwNA3hPQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"testUser\",\r\n    \"name\": \"user test\",\r\n    \"password\": \"testPassword\",\r\n    \"email\": \"testUser@user.com\",\r\n    \"role\": \"MANAGER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/user/signUp",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"signUp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"testJaneDoe7\",\r\n  \"password\": \"testPassword\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login Admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"admin1234\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMjEzODQ3OCwiZXhwIjoxNzEyNDM4NDc4fQ.WG3aHmS0TC9nxELfBdv678SCaS6WFnOGjVv7f2e4GTQKtFyTDKo5cd6AVYWjZ_TeSNs_q7qucCD_uqgwNA3hPQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"johnnyDoey\",\r\n  \"password\": \"testPassword1234\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/user/:userId",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										":userId"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": null,
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0Sm9obkRvZSIsImlhdCI6MTcxMjEzODgxNSwiZXhwIjoxNzEyNDM4ODE1fQ.-qdYZ9obCz9I5nrgdVa8e2vFIsvO5CmWGP1jQFnwP73FvVKf-WAdlq4rFm2n2bC9jVen8i6beO6-4r3hla-GmQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"testJohnAccount\",\r\n    \"password\": \"testPassword\",\r\n    \"email\": \"mail@mail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/user/profile",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"profile"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMjEzODQ3OCwiZXhwIjoxNzEyNDM4NDc4fQ.WG3aHmS0TC9nxELfBdv678SCaS6WFnOGjVv7f2e4GTQKtFyTDKo5cd6AVYWjZ_TeSNs_q7qucCD_uqgwNA3hPQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"hesen\",\r\n  \"password\": \"testPassword\",\r\n  \"deposit\": 100,\r\n  \"role\": \"SELLER\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/user/:userId",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										":userId"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": null,
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fetch User By Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMjEzODQ3OCwiZXhwIjoxNzEyNDM4NDc4fQ.WG3aHmS0TC9nxELfBdv678SCaS6WFnOGjVv7f2e4GTQKtFyTDKo5cd6AVYWjZ_TeSNs_q7qucCD_uqgwNA3hPQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/user/:userId",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										":userId"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": null,
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Profile",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0SmFuZURvZTciLCJpYXQiOjE3MTIxMzkzODYsImV4cCI6MTcxMjQzOTM4Nn0.sYTD-jcPv3sa0Yp9OK9PJA6440zRgWg8QRt9uo_JWBwzfgGZ4EdtaUikcYZVwGMtoV4cq1-5n5bS2dJMV9QE3w",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/user/profile",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										"profile"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Users",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTcxMjEzODQ3OCwiZXhwIjoxNzEyNDM4NDc4fQ.WG3aHmS0TC9nxELfBdv678SCaS6WFnOGjVv7f2e4GTQKtFyTDKo5cd6AVYWjZ_TeSNs_q7qucCD_uqgwNA3hPQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/user/?page=2&size=10",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

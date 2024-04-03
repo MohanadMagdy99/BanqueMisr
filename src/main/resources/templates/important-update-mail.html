@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap');
+    </style>
+</head>
+<body style="font-family:Figtree,sans-serif;background-color:#fafafc;padding-top:90px">
+
+<div style="max-width:700px; height:fit-content;margin:auto;padding-top:40px;background-color:#ffffff;border:1px solid #d1d6e5">
+    <div style="margin-right:35px;margin-left:35px">
+        <p>Hi <span th:text="${employeeName}">${employeeName}</span>,</p>
+        <p>Hope you are doing well;</p>
+        <br>
+        <p>Please finalize task: <span th:text="${taskName}">${taskName}</span> before end of sprint as it is important
+            for this sprint scope</p>
+
+        <br>To ensure a thorough delivery of the scope, we have allocated dedicated resources at your disposal if
+        needed.
+        <br>
+        <br>Please inform if there are any blockers you are facing
+        <p>Best Regards,
+            <br>Your Banque Misr team
+        </p>
+    </div>
+</div>
+
+<div style="color:#2b3674;padding-top:25px;max-width:700px;margin:auto;margin-bottom:50px">
+
+</div>
+</body>
+</html>

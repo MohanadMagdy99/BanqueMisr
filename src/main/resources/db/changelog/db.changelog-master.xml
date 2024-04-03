@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Example change set -->
+    <changeSet failOnError="true" id="USER_TEST_DATA" author="mohanad">
+        <!-- SQL changes to be applied -->
+        <sql>
+            INSERT INTO users (username, name, email, password, role, creation_date, last_modified_at)
+            VALUES ('johnDoe', 'John Doe', 'john.doe@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T08:00:00+00:00', '2023-04-01T08:00:00+00:00'),
+                   ('janeDoe', 'Jane Doe', 'jane.doe@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00'),
+                   ('testJohnDoe', 'First Doe', 'test.john@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T08:00:00+00:00', '2023-04-01T08:00:00+00:00'),
+                   ('testJaneDoe', 'Second Doe', 'test.jane@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00'),
+                   ('testJaneDoe2', 'Second Jane', 'test2.jane@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00'),
+                   ('testJaneDoe3', 'Third Jane', 'test3.jane@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00'),
+                   ('testJaneDoe4', 'Fourth Jane', 'test4.jane@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00'),
+                   ('testJaneDoe5', 'Fifth Jane', 'test5.jane@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00'),
+                   ('testJaneDoe6', 'Sixth Jane', 'test6.jane@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00'),
+                   ('testJaneDoe7', 'Seventh Jane', 'test7.jane@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00'),
+                   ('testJaneDoe8', 'Eighth Jane', 'test8.jane@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00'),
+                   ('testJaneDoe9', 'Ninth Jane', 'test9.jane@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00'),
+                   ('testJaneDoe10', 'Tenth Jane', 'test10.jane@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00'),
+                   ('testJaneDoe11', 'Eleventh Jane', 'test11.jane@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'EMPLOYEE',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00'),
+                   ('testJaneDoeManager', 'Manager Doe', 'test12.jane@example.com',
+                    '$2a$10$.NbwlL3RNWA0cgD54zDys.ruAODdbOKmFoYDx406C7sxMBmUqmzA2', 'MANAGER',
+                    '2023-04-01T09:00:00+00:00', '2023-04-01T09:00:00+00:00');
+        </sql>
+    </changeSet>
+    <changeSet failOnError="true" id="TASK_TEST_DATA" author="mohanad">
+        <!-- SQL changes to be applied -->
+        <sql>
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 1', NOW() + INTERVAL '10 day', 'HIGH', 'TODO', 'Task Title 1',
+                    null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 2', NOW() + INTERVAL '10 day', 'CRITICAL', 'IN_PROGRESS',
+                    'Task Title 2', null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 3', NOW() + INTERVAL '10 day', 'MEDIUM', 'DONE', 'Task Title 3',
+                    null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 4', NOW() + INTERVAL '10 day', 'LOW', 'CANCELLED', 'Task Title 4',
+                    null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 5', NOW() + INTERVAL '10 day', 'HIGH', 'IN_PROGRESS',
+                    'Task Title 5', null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 6', NOW() + INTERVAL '10 day', 'CRITICAL', 'DONE', 'Task Title 6',
+                    null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 7', NOW() + INTERVAL '10 day', 'MEDIUM', 'CANCELLED',
+                    'Task Title 7', null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 8', NOW() + INTERVAL '10 day', 'LOW', 'TODO', 'Task Title 8', null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 9', NOW() + INTERVAL '10 day', 'HIGH', 'DONE', 'Task Title 9',
+                    null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 10', NOW() + INTERVAL '10 day', 'CRITICAL', 'TODO', 'Task Title 10',
+                    null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 11', NOW() + INTERVAL '10 day', 'MEDIUM', 'IN_PROGRESS',
+                    'Task Title 11', null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 12', NOW() + INTERVAL '10 day', 'LOW', 'DONE', 'Task Title 12',
+                    null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 13', NOW() + INTERVAL '10 day', 'HIGH', 'CANCELLED',
+                    'Task Title 13', null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 14', NOW() + INTERVAL '10 day', 'CRITICAL', 'IN_PROGRESS',
+                    'Task Title 14', null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 15', NOW() + INTERVAL '10 day', 'MEDIUM', 'TODO', 'Task Title 15',
+                    null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 16', NOW() + INTERVAL '10 day', 'LOW', 'IN_PROGRESS',
+                    'Task Title 16', null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 17', NOW() + INTERVAL '10 day', 'HIGH', 'DONE', 'Task Title 17',
+                    null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 18', NOW() + INTERVAL '10 day', 'CRITICAL', 'CANCELLED',
+                    'Task Title 18', null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 19', NOW() + INTERVAL '10 day', 'MEDIUM', 'IN_PROGRESS',
+                    'Task Title 19', null);
+
+            INSERT INTO public.task (creation_date, last_modified_at, description, due_date, priority, status, title,
+                                     user_id)
+            VALUES (NOW(), NOW(), 'Task Description 20', NOW() + INTERVAL '10 day', 'LOW', 'TODO', 'Task Title 20',
+                    null);
+        </sql>
+    </changeSet>
+</databaseChangeLog>
