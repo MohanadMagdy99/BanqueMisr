@@ -7,15 +7,15 @@ This is a Task-Management Application Challenges
 1. Make sure Java >= 17 is installed
 2. Make sure Docker is installed
 3. Make sure IntelliJ is installed
-6. Check versions
+4. Check versions
 
 ```bash
 mvn clean install
-docker-compose up
+docker-compose up -d
 ```
 
-7. change variable spring.liquibase.enabled to false and run the application to create tables with JPA
-8. change the variable back to true and rerun the application for the seed data to be inserted
+5. change variable spring.liquibase.enabled to false and run the application to create tables with JPA
+6. change the variable back to true and rerun the application for the seed data to be inserted
 
 There are 3 types of users
 
