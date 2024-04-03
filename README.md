@@ -28,6 +28,7 @@ Manager who has allowed actions of Manager role like assign task to employee, up
 
 in order to test the apis you will find a postman collection along with the code
 
+you can access mails btw sent through this url http://localhost:1080/#/
 
 P.S the application supports both pagination and filtering for filtering any get api that 
 has paging to it the filteration for Tasks are the fields of TaskFilter.java 
