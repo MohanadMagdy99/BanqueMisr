@@ -15,7 +15,8 @@ docker-compose up -d
 ```
 
 5. change variable spring.liquibase.enabled to false and run the application to create tables with JPA
-6. change the variable back to true and rerun the application for the seed data to be inserted
+6. change the variable back to true and rerun the application for the seed data to be inserted every user inserted using seed data`s password is testPassword and the admin username and password is as follows:
+ username: admin password: admin1234
 
 There are 3 types of users
 
